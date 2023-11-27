@@ -1,4 +1,4 @@
-
+import subprocess
 import pygame
 import sys
 
@@ -32,31 +32,31 @@ def draw_text(text, size, color, x, y):
 
 #CÁC ĐƯỜNG DẪN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # Đường dẫn đến hình ảnh PNG bạn muốn sử dụng làm nền
-background_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/backround.jpg"
+background_image = "D:/Maze-Pathfinding-main/Display/backround.jpg"
 # Đường dẫn đến hình ảnh nút bắt đầu trò chơi
-start_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_startgame_menu (1).png"
+start_button_image = "D:/Maze-Pathfinding-main/Display/nut_startgame_menu (1).png"
 # Đường dẫn đến hình ảnh option frame
-option_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/khung_option (1) (1).png"
+option_button_image = "D:/Maze-Pathfinding-main/Display/khung_option (1) (1).png"
 # Đường dẫn đến hình ảnh nút back
-back_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_back (1).png"
+back_button_image = "D:/Maze-Pathfinding-main/Display/nut_back (1).png"
 # Đường dẫn đến hình ảnh nút Person
-person_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_nguoi_choi_png (1).png"
+person_button_image = "D:/Maze-Pathfinding-main/Display/nut_nguoi_choi_png (1).png"
 # Đường dẫn đến hình ảnh nút Computer
-computer_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_may_choi.png"
+computer_button_image = "D:/Maze-Pathfinding-main/Display/nut_may_choi.png"
 # Đường dẫn đến hình ảnh nút Level
-level_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_chon_level.png"
+level_button_image = "D:/Maze-Pathfinding-main/Display/nut_chon_level.png"
 # Đường dẫn đến hình ảnh nút Computer
-newgame_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/nut_new_game.png"
+newgame_button_image = "D:/Maze-Pathfinding-main/Display/nut_new_game.png"
 # Đường dẫn đến hình ảnh nút level 1 2 3 4 5 6 7 8 9
-level1_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_1.png"
-level2_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_2.png"
-level3_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_3.png"
-level4_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_4.png"
-level5_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_5.png"
-level6_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_6.png"
-level7_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_7.png"
-level8_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_8.png"
-level9_button_image = "D:/Nam3HK1/TiTueNhanTaoThayDung/Maze/level_9.png"
+level1_button_image = "D:/Maze-Pathfinding-main/Display/level_1.png"
+level2_button_image = "D:/Maze-Pathfinding-main/Display/level_2.png"
+level3_button_image = "D:/Maze-Pathfinding-main/Display/level_3.png"
+level4_button_image = "D:/Maze-Pathfinding-main/Display/level_4.png"
+level5_button_image = "D:/Maze-Pathfinding-main/Display/level_5.png"
+level6_button_image = "D:/Maze-Pathfinding-main/Display/level_6.png"
+level7_button_image = "D:/Maze-Pathfinding-main/Display/level_7.png"
+level8_button_image = "D:/Maze-Pathfinding-main/Display/level_8.png"
+level9_button_image = "D:/Maze-Pathfinding-main/Display/level_9.png"
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
@@ -126,7 +126,7 @@ while running:
                 elif person_button_frame.rect.collidepoint(event.pos):
                     is_level_screen = True
                 elif computer_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Computer")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Computer/Computer.py"])
             elif is_level_screen and not is_level123_screen:
                 if back_button_frame.rect.collidepoint(event.pos):
                     is_level_screen = False
