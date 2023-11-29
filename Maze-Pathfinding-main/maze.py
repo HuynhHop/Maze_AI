@@ -133,20 +133,29 @@ while running:
                 elif level_button_frame.rect.collidepoint(event.pos):
                     is_level123_screen = True
                 elif newgame_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn New Game")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level1.py"])
             elif is_level123_screen:
                 if back_button_frame.rect.collidepoint(event.pos):
                     is_level123_screen = False  # Thoát khỏi màn hình Level1, Level2, Level3
                 elif level1_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Level1")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level1.py"])
                 elif level2_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Level2")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level2.py"])
                 elif level3_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Level3")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level3.py"])
                 elif level4_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Level4")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level4.py"])
                 elif level5_button_frame.rect.collidepoint(event.pos):
-                    print("Thành công - Chọn Level5")
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level5.py"])
+                elif level6_button_frame.rect.collidepoint(event.pos):
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level6.py"])
+                elif level7_button_frame.rect.collidepoint(event.pos):
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level7.py"])
+                elif level8_button_frame.rect.collidepoint(event.pos):
+                    subprocess.call(["python", "D:/Maze-Pathfinding-main/Player/level8.py"])
+                elif level9_button_frame.rect.collidepoint(event.pos):
+                    print("Thành công - Chọn Level9")
+
     # Vẽ hình ảnh nền lên cửa sổ
     screen.blit(background, (0, 0))
     draw_text("MAZE", 70, ORANGE, 230 + 100, 60)

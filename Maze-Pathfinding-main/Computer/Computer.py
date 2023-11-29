@@ -228,7 +228,7 @@ def bellman_ford():
                     came_from[nei] = node
                     grid[nei[0]][nei[1]] = 5  # Visualize the exploration
                     draw_grid()
-                    pygame.time.delay(100)  # Adjust the delay as needed
+                    # pygame.time.delay(100)  # Adjust the delay as needed
 
     # Check for negative cycles
     for node in neighbour:
@@ -242,7 +242,7 @@ def bellman_ford():
     while current != start:
         grid[current[0]][current[1]] = 4
         draw_grid()
-        pygame.time.delay(100)  # Adjust the delay as needed
+        # pygame.time.delay(100)  # Adjust the delay as needed
         current = came_from[current]
 
     # Update the metrics
