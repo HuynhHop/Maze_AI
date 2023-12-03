@@ -2,6 +2,7 @@ import pygame
 import numpy as np
 from queue import PriorityQueue
 import pygame_gui
+import sys
 
 
 def read_data_from_file(file_path):
@@ -49,6 +50,7 @@ def history():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                sys.exit()
 
         manager.process_events(event)
 
